@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: 
-         wget https://github.com/chaitin/xray/releases/download/1.9.4/xray_windows_amd64.exe.zip
+         curl -O xray_windows_amd64.exe.zip   https://github.com/chaitin/xray/releases/download/1.9.4/xray_windows_amd64.exe.zip
          compact /u /s
          cd xray_windows_amd64.exe
          .\xray_windows_amd64.exe  webscan --basic-crawler http://mydcis.net/ --html-output xray-crawler-testphp.html
