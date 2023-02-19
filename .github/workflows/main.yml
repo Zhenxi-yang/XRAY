@@ -29,8 +29,14 @@ jobs:
       - name: Run a one-line script
         run: 
          curl -O xray_windows_amd64.exe.zip   https://github.com/chaitin/xray/releases/download/1.9.4/xray_windows_amd64.exe.zip
+      - name: a
+        run:
          compact /u /s
+      - name: v
+        run:
          cd xray_windows_amd64.exe
+      - name: c  
+        run:
          .\xray_windows_amd64.exe  webscan --basic-crawler http://mydcis.net/ --html-output xray-crawler-testphp.html
 
       # Runs a set of commands using the runners shell
